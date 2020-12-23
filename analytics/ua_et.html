@@ -14,22 +14,7 @@
     <div style="border-bottom: 1px solid #dadce0;">
        <h1>UA Event Tracking </h1> <h3>Analytics event (either UA or GA4) should not be considered exclusively as the way to define a clicked element; 
         however in most cases it is so. With event tracking you can trace any action that happened on the web-page, so let's take a look at few examples.</h3>
-  </div>
-    <div class="def"> 
-        <h3>How do we send events?</h3><br>
-        To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML event</a></b> which is responsible for firing 
-        when some action is happenning on the webpage. Lets take a look at the atnomy of a simple event which is being sent when someon clicks on the button.<br>
-        &lt;button onclick="gtag('event','this-is-click',{'event_category':'some_category'})"&gt; As you may notice, we insert our "event code" inside the *opening tag of the button
-        the element is clicked and tell -
-            when this element is clicked you should call a fucntion "gtag". Next the function "gtag" sends a set of parameters, first one being
-            'event', so Analytics knows that we are sending an event, than the name of the event - you can call it whatever you like, and finally - 
-            the rest of the parameters (on HC you will find them as category, label and value).
-        <br><br>
-        *Normally you will see HTML elements having opening &lt;&gt; and closing &lt;/&gt; tags. Everything between them is considered a part of the element. <br><br>E.G. <button>This is my button</button> &lt;button&gt; This 
-        is my button &lt;/button&gt; - in this case <b>&lt;button&gt;<b> is an opening tag, <b>&lt;/button&gt;<b> is a closing tag and "This is my button" is the text that you 
-        will see in the button.
-    </div>
-    <div class="links">
+        <div class="links">
         Useful links:
         <ul class="ua_event_links">
             <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events"><li>Measure Google Analytics Events (Developers)</li></a>
@@ -38,6 +23,22 @@
 
         </ul>
     </div>
+  </div>
+    <div class="def"> 
+        <h3>How do we send events?</h3><br>
+        To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML event</a></b> which is responsible for firing 
+        when some action is happenning on the webpage. Lets take a look at the anatomy of a simple event which is being sent when someon clicks on the button.<br>
+        &lt;button onclick="gtag('event','this-is-click',{'event_category':'some_category'})"&gt; As you may notice, we insert our "event code" inside the **opening tag of the button
+        the element is clicked and tell -
+            when this element is clicked you should call a fucntion "gtag". Next the function "gtag" sends a set of parameters, first one being
+            'event', so Analytics knows that we are sending an event, than the name of the event - you can call it whatever you like, and finally - 
+            the rest of the parameters (on HC you will find them as category, label and value).
+        <br><br>
+        **Normally you will see HTML elements having opening &lt;&gt; and closing &lt;/&gt; tags. Everything between them is considered a part of the element. <br><br>E.G. <button>This is my button</button> &lt;button&gt; This 
+        is my button &lt;/button&gt; - in this case <b>&lt;button&gt;<b> is an opening tag, <b>&lt;/button&gt;<b> is a closing tag and "This is my button" is the text that you 
+        will see in the button.
+    </div>
+    
   </div>
 
     <div class="grid-container">
