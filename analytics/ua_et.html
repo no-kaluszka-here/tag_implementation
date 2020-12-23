@@ -7,16 +7,33 @@
 
 </head>
 
-<body>
+<body onload="gtag('event','page_load',{'event_category':'some_category'})">
 
 <div class="main">
-    <div>
-       <h1>UA Event Tracking</h1>
+  <div class="info">
+    <div style="border-bottom: 1px solid #dadce0;">
+       <h1>UA Event Tracking </h1> <h3>Analytics event (either UA or GA4) should not be considered exclusively as the way to define a clicked element; 
+        however in most cases it is so. With event tracking you can trace any action that happened on the web-page, so let's take a look at few examples.</h3>
+  </div>
+    <div class="def"> 
+        <h3>How do we send events?</h3><br>
+        To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp">HTML event</a></b> which is responsible for firing 
+        when some action is happenning on the webpage.  the element is clicked and tell -
+            when this element is clicked you should call a fucntion "gtag". Next the function "gtag" sends a set of parameters, first one being
+            'event', so Analytics knows that we are sending an event, than the name of the event - you can call it whatever you like, and finally - 
+            the rest of the parameters (on HC you will find them as category, label and value).
     </div>
-    <div class="def">Analytics event (either UA or GA4) should not be considered exclusively as the way to define a clicked element; 
-        however in most cases it is so. With event tracking you can trace any action that happened on the web-page, so let's take a look at few examples.
+    <div class="links">
+        Useful links:
+        <ul class="ua_event_links">
+            <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events"><li>Measure Google Analytics Events (Developers)</li></a>
+            <a href="https://support.google.com/analytics/answer/1033068"><li>About Events (Analytics HC)</li></a>
+            <a href="https://www.w3schools.com/tags/ref_eventattributes.asp"><li>The list of HTML events</li></a>
+
+        </ul>
     </div>
-    
+  </div>
+
     <div class="grid-container">
         <div class="grid-item-1">
             <div class="definition"> <h1>Definition</h1></div> <br>
@@ -32,15 +49,16 @@
 
         <div class="grid-item-2">
             <div class="action"> <h1>Action</h1></div> <br>
-            <div class="action"><button>Click me</button></div> <br>
-            <div class="action_form" onsubmit="answer();"><form>
+        <div class="action" onclick="gtag('event','click',{'event_category':'some_category'})"><button>Click me</button></div> <br>
+            <div class="action_form" onsubmit="answer();">
+            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'some_category'})">
                 <label for="name">Answer to the Ultimate Question of Life, the Universe, and Everything</label> <br>
-                <input type="text" name="name"> <br>
+                <input type="text" id="answer"> <br>
                 <input type="submit" value="Submit">
             </form></div> <br>
             <div class="action">When this page loaded, it triggered an event</div> <br>
             <div class="action">
-               <audio controls>
+               <audio controls style="margin:0 auto;">
                 <source src="./Keep-Getting-Up_AdobeStock_357346059_preview.mpeg" type="audio/mpeg">   
                 </audio>
             </div> <br>
@@ -48,9 +66,11 @@
 
         <div class="grid-item-3">
         <div class="code"><h1>Code</h1></div> <br>
-        <div class="code"></div> <br>
-        <div class="code"></div> <br>
-        <div class="code"></div> <br>
+        <div class="code">&lt;button onclick="gtag('event','click',{'event_category':'some_category'})"&gt;
+            <br> 
+        </div> <br>
+        <div class="code">&lt;form onsubmit="gtag('event','form_submission',{'event_category':'some_category'})"&gt;</div> <br>
+        <div class="code">&lt;body onload="gtag('event','page_load',{'event_category':'some_category'})"&gt;</div> <br>
         <div class="code"></div> <br>
     </div>
 </div>
