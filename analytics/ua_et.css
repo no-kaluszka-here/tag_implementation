@@ -26,7 +26,7 @@ li:hover {
 }
 
 .grid-container {
-    margin-top: 300px;
+    margin-top: 400px;
     display: grid;
     grid-template-columns: 300px 500px auto;
     padding: 10px;
