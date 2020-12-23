@@ -3,7 +3,10 @@ body{
         font-family: 'Roboto', sans-serif;
       }
 
-     
+h1{
+    color: #1a73e8;
+      }
+
 .def{
     float:left;
     width: 500px;
