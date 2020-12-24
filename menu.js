@@ -25,16 +25,15 @@ $( ".gtm" ).click(function() {
 // Change links GA4/UA
 
 $( ".ga4").click(function() {
- 
     if ($(".analytics_but").html()=="UA") {
     $(".analytics_but").html("GA4");
-    $(".analytics_but").fadeToggle();   
+    $(".analytics_but").fadeOut();   
     $("#et").attr("href","ga4-et.html");
     $("#dr").attr("href","ga4-dr.html");
     $("#ecomm").attr("href","ga4-ecomm.html");  
     }
     else {$(".analytics_but").html("UA"); 
-    $(".analytics_but").fadeToggle();        
+    $(".analytics_but").fadeToggle();      
     $("#et").attr("href","ua-et.html");
     $("#dr").attr("href","ua-dr.html");
     $("#ecomm").attr("href","ua-ecomm.html");
