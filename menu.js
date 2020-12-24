@@ -26,7 +26,7 @@ $( ".gtm" ).click(function() {
 
 $( ".ga4").click(function() {
     if ($(".analytics_but").html()=="UA") {
-    $(".analytics_but").html("GA4");
+    $(".analytics_but").html("GA4");    
     $("#et").attr("href","ga4-et.html");
     $("#dr").attr("href","ga4-dr.html");
     $("#ecomm").attr("href","ga4-ecomm.html");  
@@ -36,6 +36,9 @@ $( ".ga4").click(function() {
     $("#dr").attr("href","ua-dr.html");
     $("#ecomm").attr("href","ua-ecomm.html");
     }
+    $(".analytics_but").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(2000);
 });
 
 });
