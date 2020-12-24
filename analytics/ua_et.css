@@ -10,6 +10,10 @@ a {
     text-decoration:none;
   }
 
+#intext-link:hover{
+   text-shadow: 2px 2px 4px #79b3ff;;
+}
+
 li:hover {
     text-shadow: 2px 2px 4px #79b3ff;;
   }
