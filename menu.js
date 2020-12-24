@@ -27,13 +27,11 @@ $( ".gtm" ).click(function() {
 $( ".ga4").click(function() {
     if ($(".analytics_but").html()=="UA") {
     $(".analytics_but").html("GA4");
-    $(".analytics_but").fadeOut();   
     $("#et").attr("href","ga4-et.html");
     $("#dr").attr("href","ga4-dr.html");
     $("#ecomm").attr("href","ga4-ecomm.html");  
     }
-    else {$(".analytics_but").html("UA"); 
-    $(".analytics_but").fadeToggle();      
+    else {$(".analytics_but").html("UA");    
     $("#et").attr("href","ua-et.html");
     $("#dr").attr("href","ua-dr.html");
     $("#ecomm").attr("href","ua-ecomm.html");
