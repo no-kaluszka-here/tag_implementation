@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="gtag('event','page_load',{'event_category':'some_category'})">
+<body onload="gtag('event','page_load',{'event_category':'page'})">
 
 <div class="main">
   <header class="info">
@@ -74,9 +74,9 @@
 
         <div class="grid-item-2">
             <div class="action"> <h1>Action</h1></div> <br>
-        <div class="action" onclick="gtag('event','click',{'event_category':'some_category'})"><button>Click me</button></div> <br>
+        <div class="action" onclick="gtag('event','click',{'event_category':'button'})"><button>Click me</button></div> <br>
             <div class="action_form" onsubmit="answer();">
-            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'some_category'});">
+            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'form'});">
                 <label for="name">Answer to the Ultimate Question of Life, the Universe, and Everything</label> <br>
                 <input type="text" id="answer"> <br>
                 <input type="submit" value="Submit">
@@ -91,11 +91,11 @@
 
         <div class="grid-item-3">
         <div class="code"><h1>Code</h1></div> <br>
-        <div class="code">&lt;button onclick="gtag('event','click',{'event_category':'some_category'})"&gt;
+        <div class="code">&lt;button onclick="gtag('event','click',{'event_category':'button'})"&gt;
             <br> 
         </div> <br>
-        <div class="code">&lt;form onsubmit="gtag('event','form_submission',{'event_category':'some_category'})"&gt;</div> <br>
-        <div class="code">&lt;body onload="gtag('event','page_load',{'event_category':'some_category'})"&gt;</div> <br>
+        <div class="code">&lt;form onsubmit="gtag('event','form_submission',{'event_category':'form'})"&gt;</div> <br>
+        <div class="code">&lt;body onload="gtag('event','page_load',{'event_category':'page'})"&gt;</div> <br>
         <div class="code">&lt;audio onplay="gtag('event','play',{'event_category':'audio'})", onpause="gtag('event','pause',{'event_category':'audio'})"&gt;</div> <br>
     </div>
 </div>
