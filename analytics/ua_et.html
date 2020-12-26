@@ -10,21 +10,24 @@
 <body onload="gtag('event','page_load',{'event_category':'some_category'})">
 
 <div class="main">
-  <div class="info">
-    <div style="border-bottom: 1px solid #dadce0;">
-       <h1>UA Event Tracking </h1> <h3>Analytics event (either UA or GA4) should not be considered exclusively as the way to define a clicked element; 
-        however in most cases it is so. With event tracking you can trace any action that happened on the webpage, so let's take a look at few examples.</h3>
-        <div class="links">
+  <header class="info">
+    <div class="def">
+       <h1>UA Event Tracking</h1> <h3>Analytics event (either UA or GA4) should not be considered exclusively as the way to define a clicked element; 
+        however, in most cases it is so. With event tracking you can trace any action that happened on the webpage, so let's take a look at few examples.</h3>
+       </div>
+    <div class="links">
         <h3>Useful links:</h3>
         <ul class="ua_event_links">
             <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank"><li>Measure Google Analytics Events (Developers)</li></a>
             <a href="https://support.google.com/analytics/answer/1033068" target="_blank"><li>About Events (Analytics HC)</li></a>
             <a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank"><li>The list of HTML events</li></a>
-
         </ul>
     </div>
-  </div>
-    <div class="def"> 
+    
+</header>
+
+  
+    <div class="how"> 
         <h3>How do we send events?</h3><br>
         To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank" id="intext-link">HTML event</a></b> which is responsible for firing 
         when some action is happenning on the webpage. Lets take a look at the anatomy of a simple event which is being sent when someon clicks on the button.
@@ -45,7 +48,6 @@
         will see in the button.
     </div>
     
-  </div>
 
     <div class="grid-container">
         <div class="grid-item-1">
@@ -64,12 +66,12 @@
             <div class="action"> <h1>Action</h1></div> <br>
         <div class="action" onclick="gtag('event','click',{'event_category':'some_category'})"><button>Click me</button></div> <br>
             <div class="action_form" onsubmit="answer();">
-            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'some_category'})">
+            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'some_category'});">
                 <label for="name">Answer to the Ultimate Question of Life, the Universe, and Everything</label> <br>
                 <input type="text" id="answer"> <br>
                 <input type="submit" value="Submit">
             </form></div> <br>
-            <div class="action">When this page loaded, it triggered an event</div> <br>
+            <div class="action">When the body (contents) this page loaded, it triggered an event</div> <br>
             <div class="action">
                <audio controls style="margin:0 auto;">
                 <source src="./Keep-Getting-Up_AdobeStock_357346059_preview.mpeg" type="audio/mpeg">   
@@ -84,7 +86,7 @@
         </div> <br>
         <div class="code">&lt;form onsubmit="gtag('event','form_submission',{'event_category':'some_category'})"&gt;</div> <br>
         <div class="code">&lt;body onload="gtag('event','page_load',{'event_category':'some_category'})"&gt;</div> <br>
-        <div class="code"></div> <br>
+        <div class="code">&lt;audio onplay="gtag('event','play',{'event_category':'audio'})", onpause="gtag('event','pause',{'event_category':'audio'})"&gt;</div> <br>
     </div>
 </div>
 
