@@ -83,7 +83,7 @@
             </form></div> <br>
             <div class="action">When the body (contents) this page loaded, it triggered an event</div> <br>
             <div class="action">
-               <audio controls style="margin:0 auto;">
+               <audio onplay="gtag('event','play',{'event_category':'audio'})", onpause="gtag('event','pause',{'event_category':'audio'})" controls style="margin:0 auto;">
                 <source src="./Keep-Getting-Up_AdobeStock_357346059_preview.mpeg" type="audio/mpeg">   
                 </audio>
             </div> <br>
