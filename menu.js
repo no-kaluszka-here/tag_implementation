@@ -31,10 +31,11 @@ $( ".ga4").click(function() {
     $("#dr").attr("href","analytics\ga4-dr.html");
     $("#ecomm").attr("href","analytics\ga4-ecomm.html");  
     }
-    else {$(".analytics_but").html("UA");    
-    $("#et").attr("href","analytics\ua-et.html");
-    $("#dr").attr("href","analytics\ua-dr.html");
-    $("#ecomm").attr("href","analytics\ua-ecomm.html");
+    else {
+    $(".analytics_but").html("UA");    
+    $("#et").attr("href",'analytics\ua-et.html');
+    $("#dr").attr("href",'analytics\ua-dr.html');
+    $("#ecomm").attr("href",'analytics\ua-ecomm.html');
     }
 });
 
