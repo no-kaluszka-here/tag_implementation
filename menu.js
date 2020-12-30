@@ -27,9 +27,9 @@ $( ".gtm" ).click(function() {
 $( ".ga4").click(function() {
     if ($(".analytics_but").html()=="UA") {
     $(".analytics_but").html("GA4");
-    $("#et").attr("href","analytics\ga4-et.html");
-    $("#dr").attr("href","analytics\ga4-dr.html");
-    $("#ecomm").attr("href","analytics\ga4-ecomm.html");  
+    $("#et").attr("href","analytics\\ga4-et.html");
+    $("#dr").attr("href","analytics\\ga4-dr.html");
+    $("#ecomm").attr("href","analytics\\ga4-ecomm.html");  
     }
     else {
     $(".analytics_but").html("UA");    
