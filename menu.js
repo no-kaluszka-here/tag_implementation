@@ -33,9 +33,9 @@ $( ".ga4").click(function() {
     }
     else {
     $(".analytics_but").html("UA");    
-    $("#et").attr("href","analytics/ua-et.html");
-    $("#dr").attr("href","analytics/ua-dr.html");
-    $("#ecomm").attr("href","analytics/ua-ecomm.html");
+    $("#et").attr("href","analytics\\ua-et.html");
+    $("#dr").attr("href","analytics\\ua-dr.html");
+    $("#ecomm").attr("href","analytics\\ua-ecomm.html");
     }
 });
 
