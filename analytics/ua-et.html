@@ -2,7 +2,6 @@
 <head> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href=".\ua-et.css" type="text/css"/>
-    <script src=".\ua-et.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136338885-1"></script>
@@ -19,31 +18,57 @@
 
 <body onload="gtag('event','page_load',{'event_category':'page'})">
 
-<div class="main">
-  <header class="info">
-    <div class="def">
+<div id="main">
+  <header id="info">
+    <div id="def">
        <h1>UA Event Tracking</h1> <h3>Analytics event should not be considered exclusively as the way to define a clicked element; 
         however, in most cases it is so. With event tracking you can trace any action that happened on the webpage, so let's take a look at few examples.</h3>
        </div>
-    <div class="links">
+    <div id="links">
         <h3>Useful links:</h3>
         <ul class="ua_event_links">
-            <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank"><li>Measure Google Analytics Events (Developers)</li></a>
-            <a href="https://support.google.com/analytics/answer/1033068" target="_blank"><li>About Events (Analytics HC)</li></a>
-            <a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank"><li>The list of HTML events</li></a>
+            <a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank"><li class="ulinks">Measure Google Analytics Events (Developers)</li></a>
+            <a href="https://support.google.com/analytics/answer/1033068" target="_blank"><li class="ulinks">About Events (Analytics HC)</li></a>
+            <a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank"><li class="ulinks">The list of HTML events</li></a>
         </ul>
     </div>
     
 </header>
 
-  
-    <div class="how"> 
+  <div id="how">
+    <div id="how-1"> 
+        
         <h3>How do we send events?</h3><br>
-        To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank" id="intext-link">HTML event</a></b> which is responsible for firing 
+        To put it simply we can use an <b><a href="https://www.w3schools.com/tags/ref_eventattributes.asp" target="_blank" id="intext-link">HTML event</a></b>, which is responsible for firing 
         when some action is happenning on the webpage. Lets take a look at the anatomy of a simple event which is being sent when someon clicks on the button.
         
         <br><br>
-        &lt;button onclick="gtag('event','this-is-click',{'event_category':'some_category'})"&gt; As you may notice, we insert our "event code" inside the **opening tag of the button
+        <h4 style="text-align: center;"><span style="color:rgb(206, 3, 3)">&lt;button</span> <span style="color:hotpink">onclick=</span><span style="color:forestgreen">"gtag('event','this-is-click',{'event_category':'some_category'})"</span><span style="color:rgb(207, 7, 7)">&gt;</span></h4> 
+        
+        <ul>
+            <li><span style="color:rgb(236, 3, 3)">&lt;button&gt;</span> marked with red represents an opening tag of the button element.
+                In HTML elements have opening &lt; &gt; and closing &lt;/ &gt; tags. Everything between them is considered a content of the element.
+                A simple button element is written as <b>&lt;button&gt;</b> <b>&lt;/button&gt;</b>, form - <b>&lt;form&gt;</b> <b>&lt;/form&gt;</b>,
+                a clickable link - <b>&lt;a&gt;</b> <b>&lt;/a&gt;</b>
+            </li>
+            <br>
+            <li><span style="color:hotpink">onclick=</span> marked with pink is an HTML event. Those are representatives of different actions
+                that may occure on the webpage. The names of HTML events are quite intuitive, so "onclick" literally means "when the element is clicked",
+                "onsubmit" is another HTML event - "when the form is submitted", "oncopy" fires "when the user copies the content of the element".
+                Event keyword is put in the opening tag of the element and is followed by the equals sign "=", so everything that follows
+                tells us what is triggered.
+            </li>
+            <br>
+            <li>
+                <span style="color:forestgreen">"gtag('event','this-is-click',{'event_category':'some_category'})"</span> marked with green is an
+                actual event that we are sending to Google Analytics. "gtag" is a function and it's sending arguments to Analytics. The first argument
+                tells what kind of information we send - 'event', the second argument is the name of the event (referred to as "action"), the third is a set
+                of event parameters: category, value, label.
+            </li>
+        </ul>
+
+        <br><br>
+        As you may notice, we insert our "event code" inside the **opening tag of the button
         &lt;button&gt;. We start implementation with initializing an HTML event - something that will tell our code when to fire. In this case it's <b>onclick</b>, meaning
         that the code will fire when the element is clicked. By putting the <i>equals sign</i> we tell what exactly should happen when the element is clicked. As in out example, when
         the buttin is clicked we call a fucntion "gtag". Next the function "gtag" sends a set of parameters, first one being
@@ -57,10 +82,14 @@
         is my button &lt;/button&gt;</i> - in this case <b>&lt;button&gt;</b> is an opening tag, <b>&lt;/button&gt;</b> is a closing tag and "This is my button" is the text that you 
         will see in the button.
     </div>
-    
+    <div id="tips">
+        <h3>Tips</h3>    
+    </div>
+     
+  </div>   
 
-    <div class="grid-container">
-        <div class="grid-item-1">
+    <div class="examples-grid">
+        <div class="grid-ex-1">
             <div class="definition"> <h1>Definition</h1></div> <br>
             <div class="definition">Onclick event occurs when the user clicks on an element.
             </div> <br>
@@ -68,39 +97,64 @@
             </div> <br>
             <div class="definition">Onload event occurs when an object has been loaded.
             </div> <br>
-            <div class="definition">Onplay and onpause events occur when the audio/video has been started/paused accordingly</div>
+            <div class="definition">Onplay and onpause events occur when the audio/video has been played/paused accordingly</div>
         </div>
 
 
-        <div class="grid-item-2">
+        <div class="grid-ex-2">
             <div class="action"> <h1>Action</h1></div> <br>
-        <div class="action" onclick="gtag('event','click',{'event_category':'button'})"><button>Click me</button></div> <br>
-            <div class="action_form" onsubmit="answer();">
-            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'form'});">
+        <div class="action" onclick="gtag('event','click',{'event_category':'button'})"><button>Click me</button><span> - it could be a button</span>
+        <br><br><u><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" onclick="gtag('event','click',{'event_category':'link'})">This will change your life</a></u><span> - or a link</span>
+        </div> <br>
+        
+
+        <div class="action_form">
+            <form class="sub_form" onsubmit="gtag('event','form_submission',{'event_category':'some_category'}); return ajaxpost()">
                 <label for="name">Answer to the Ultimate Question of Life, the Universe, and Everything</label> <br>
                 <input type="text" id="answer"> <br>
                 <input type="submit" value="Submit">
-            </form></div> <br>
-            <div class="action">When the body (contents) this page loaded, it triggered an event</div> <br>
-            <div class="action">
-               <audio onplay="gtag('event','play',{'event_category':'audio'})", onpause="gtag('event','pause',{'event_category':'audio'})" controls style="margin:0 auto;">
+        </form></div> <br>
+           
+        <div class="action">When the body (contents) of this page loaded, it triggered an event</div> <br>
+            
+        <div class="action">
+               <audio controls style="margin:0 auto;" onplay="gtag('event','play',{'event_category':'audio'})" onpause="gtag('event','pause',{'event_category':'audio'})">
                 <source src="./Keep-Getting-Up_AdobeStock_357346059_preview.mpeg" type="audio/mpeg">   
                 </audio>
             </div> <br>
         </div>
 
-        <div class="grid-item-3">
-        <div class="code"><h1>Code</h1></div> <br>
+        <div class="grid-ex-3">
+        <div class="code"><h1>Code</h1></div>
+        <br>
         <div class="code">&lt;button onclick="gtag('event','click',{'event_category':'button'})"&gt;
-            <br> 
+        <br><br>&lt;a href="https://youtu.be/dQw4w9WgXcQ" onclick="gtag('event','click',{'event_category':'link'})"&gt;
         </div> <br>
         <div class="code">&lt;form onsubmit="gtag('event','form_submission',{'event_category':'form'})"&gt;</div> <br>
         <div class="code">&lt;body onload="gtag('event','page_load',{'event_category':'page'})"&gt;</div> <br>
-        <div class="code">&lt;audio onplay="gtag('event','play',{'event_category':'audio'})", onpause="gtag('event','pause',{'event_category':'audio'})"&gt;</div> <br>
+        <div class="code">&lt;audio controls onplay="gtag('event','play',{'event_category':'audio'})" onpause="gtag('event','pause',{'event_category':'audio'})"&gt;</div> <br>
+    </div>
+</div>
+<div id="practice">
+    <div id="pr-def">
+    Using the examples above you can try creating your own events to practice.
+    </div>
+    <div id="practice-block">
+        <div id="practice-click">
+            <span>&lt;button</span><span id="click-edit" contenteditable="true"> Type here... </span><span>&gt;&lt;/button&gt;</span>
+            <button id="check-click" onclick="checkClick();">Check!</button>
+        </div>
+        <div id="practice-form">
+
+        </div>
+        <div id="practice-image">
+
+        </div>
+    
     </div>
 </div>
 
 </body>
 
-
+<script src=".\ua-et.js"></script>
 </html>
